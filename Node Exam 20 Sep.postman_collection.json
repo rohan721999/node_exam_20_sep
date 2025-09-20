@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "36c79bea-f0ae-4791-956a-f4ef02a7967a",
+		"name": "Node Exam 20 Sep",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24790045"
+	},
+	"item": [
+		{
+			"name": "Retrieve All Student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvaGFuLnBhbmNoYWxAcmFkaXh3ZWIuY29tIiwiZnVsbE5hbWUiOiJSb2hhbiBQYW5jaGFsIiwiaWF0IjoxNzU4MzYwNzg3LCJleHAiOjE3NTgzNjQzODd9.eq_I16_PthaozbCzPP8EBRpNmF5w1cWA6B9Sk1EQi2o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/api/students?search=Rohan Panchal&start=0&limit=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"students"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Rohan Panchal"
+						},
+						{
+							"key": "start",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "fullName",
+							"value": "Harsh Bhavsar",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "harsh.bhavsar@radixweb.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Harsh@123",
+							"type": "text"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "1234567891",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"type": "text"
+						},
+						{
+							"key": "enrollmentNumber",
+							"value": "B102",
+							"type": "text"
+						},
+						{
+							"key": "semester",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "branch",
+							"value": "CSE",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "B-106, Suryam sky, opp karnavati mega mall, vasrtral, Ahmedabad - 382418",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/api/students",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fullName",
+							"value": "Rohan Panchal",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "rohan.panchal@radixweb.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Rohan@1234",
+							"type": "text"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "1234567890",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"type": "text"
+						},
+						{
+							"key": "enrollmentNumber",
+							"value": "A101",
+							"type": "text"
+						},
+						{
+							"key": "semester",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "branch",
+							"value": "EE",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "B-106, Suryam sky, opp karnavati mega mall, vasrtral, Ahmedabad - 382418",
+							"type": "text"
+						},
+						{
+							"key": "profilePhoto",
+							"type": "file",
+							"src": "/home/rohan.panchal/Pictures/2025-06-19_17-26.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/api/students/68ce93aba9f42c8ddc4b360f",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"students",
+						"68ce93aba9f42c8ddc4b360f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Specific Student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/api/students/68ce55168593c69c7fcb1c12",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"students",
+						"68ce55168593c69c7fcb1c12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/api/students/68ce4cf61202e426c89541d5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"students",
+						"68ce4cf61202e426c89541d5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "rohan.panchal@radixweb.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Rohan@1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
